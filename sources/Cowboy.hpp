@@ -12,9 +12,10 @@ namespace ariel {
         public:
             Cowboy(string name, Point location)
              : Character(name, location, 110), bullets(6) {}
+            ~Cowboy() {}
 
-            bool hasBullets() {}
+            bool hasBullets() { return (this->bullets > 0);}
             void reload() {}
-            void shoot(Character enemy) {}
+            void shoot(Character* enemy) {}
     };
 }

@@ -12,18 +12,18 @@ using namespace std;
 namespace ariel {
     class Team {
         private:
-            vector<Character> warriors;
-            Character leader;
+            vector<Character*> warriors;
+            Character* leader;
 
         public:
-            Team(Character leada) : leader(leada) {}
+            Team(Character* leada) : leader(leada) {}
             ~Team() {}
 
             void add(Character* toAdd) {}
-            int stillAlive() {}
+            int stillAlive() { return warriors.size();}
 
-            void attack(Team* other);
-            string print();
+            void attack(Team* other) {}
+            void print() {}
 
     };
 }
